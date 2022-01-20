@@ -69,6 +69,9 @@ export class Phone implements PhoneModel {
       information += this.getDisplayInformation();
     }
 
+    if (typeof this.price !== 'undefined') {
+      information += this.getPriceInformation();
+    }
     return information;
   }
 
@@ -83,7 +86,7 @@ export class Phone implements PhoneModel {
     const callExist = this.callHistory.find(c => c === call) ? true : false;
     if (callExist) {
       const index = this.callHistory.findIndex(c => c === call);
-      this.callHistory.splice(index,1);
+      this.callHistory.splice(index, 1);
     }
   }
 
@@ -122,6 +125,10 @@ export class Phone implements PhoneModel {
   private getDisplayInformation(): string {
     return `Display:
     -Size: ${this.display.size},
-    -Colors: ${this.display.numberOfColors}`;
+    -Colors: ${this.display.numberOfColors}\n`;
+  }
+
+  private getPriceInformation(){
+    return `Price: ${this.price}`;
   }
 }
