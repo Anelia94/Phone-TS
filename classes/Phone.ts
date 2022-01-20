@@ -1,5 +1,5 @@
 import { PhoneModel, BatteryModel, DisplayModel } from "../models/models";
-import { Call } from "./Class";
+import { Call } from "./Call";
 
 const PRICE_PER_MINUTE: number = 1.20;
 

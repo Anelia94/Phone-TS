@@ -1,4 +1,4 @@
-import { Call } from './classes/Class';
+import { Call } from './classes/Call';
 import { Phone } from './classes/Phone';
 import { BatteryType } from './models/models';
 
